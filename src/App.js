@@ -1,23 +1,25 @@
-import logo from './logo.svg';
-import './App.css';
-
+import Navbar from "./components/Navbar";
+import { Route, Routes } from "react-router-dom";
+import ObjectDetection from "./components/ObjectDetection";
+import BlurDetection from "./components/BlurDetection";
+import Analytics from "./components/Analytics";
+import Settings from "./components/Settings";
+import AbstractSummary from "./components/AbstractSummary";
+import GenAIChatbot from "./components/GenAIChatbot";
+import Home from "./components/Home";
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="max-w-7xl mx-auto">
+      <Navbar />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/genAIChatbot" element={<GenAIChatbot />} />
+        <Route path="/abstractSummary" element={<AbstractSummary />} />
+        <Route path="/objectDetection" element={<ObjectDetection />} />
+        <Route path="/blurDetection" element={<BlurDetection />} />
+        <Route path="/analytics" element={<Analytics />} />
+        <Route path="/settings" element={<Settings />} />
+      </Routes>
     </div>
   );
 }
