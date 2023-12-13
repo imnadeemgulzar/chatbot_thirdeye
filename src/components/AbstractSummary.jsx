@@ -1,7 +1,8 @@
 import React from "react";
+import { Heading } from "./Heading";
 
 const AbstractSummary = () => {
-  return <div>AbstractSummary</div>;
+  return <Heading title="Abstract Summary" />;
 };
 
 export default AbstractSummary;

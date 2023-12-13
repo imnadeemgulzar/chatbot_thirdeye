@@ -1,7 +1,8 @@
 import React from "react";
+import { Heading } from "./Heading";
 
 const Settings = () => {
-  return <div>Settings</div>;
+  return <Heading title="Settings" />;
 };
 
 export default Settings;

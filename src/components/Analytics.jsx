@@ -1,7 +1,8 @@
 import React from "react";
+import { Heading } from "./Heading";
 
 const Analytics = () => {
-  return <div>Analytics</div>;
+  return <Heading title="Analytics" />;
 };
 
 export default Analytics;
